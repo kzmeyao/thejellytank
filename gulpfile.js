@@ -35,11 +35,13 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('styles', function () {
+gulp.task('less', function() {
   gulp.src('less/**/*.less')
     .pipe(less())
     .pipe(gulp.dest('css'));
+});
 
+gulp.task('styles', function () {
   gulp.src([
     'css/normalize.css',
     'css/main.css',
@@ -58,8 +60,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('js/**/*.js', ['scripts']);
-  gulp.watch('less/**/*.less', ['styles']);
+  gulp.watch('js/**/*.js', {debounceDelay: 2000}, ['scripts']);
+  gulp.watch('less/**/*.less', {debounceDelay: 2000}, sequence('less', 'styles'));
 });
 
 gulp.task('default', sequence('clean', ['styles', 'scripts'], 'watch'));
