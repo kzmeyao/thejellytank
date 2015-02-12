@@ -36,7 +36,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('less', function() {
-  gulp.src('less/**/*.less')
+  return gulp.src('less/**/*.less')
     .pipe(less())
     .pipe(gulp.dest('css'));
 });
