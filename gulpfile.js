@@ -1,11 +1,11 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var del = require('del');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var concatCSS = require('gulp-concat-css');
 var less = require('gulp-less');
 var sequence = require('gulp-sequence');
+var connect = require('gulp-connect');
 
 gulp.task('clean', function (cb) {
   del([
@@ -64,4 +64,8 @@ gulp.task('watch', function () {
   gulp.watch('less/**/*.less', ['styles']);
 });
 
-gulp.task('default', sequence('clean', ['styles', 'scripts'], 'watch'));
+gulp.task('server', function() {
+  connect.server({port: 4000});
+});
+
+gulp.task('default', sequence('clean', ['styles', 'scripts', 'server'], 'watch'));
