@@ -78,7 +78,7 @@ nav {
   height: 100%;
   position: fixed;
 }
-nav .overlay {
+nav .nav-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -89,13 +89,13 @@ nav .nav-wrapper {
   margin: 4em auto;
   text-align: center;
 }
-nav .logo {
+nav .nav-logo {
   text-align: center;
 }
-.gradient-underline {
+.nav-gradient {
   position: relative;
 }
-.gradient-underline:after {
+.nav-gradient:after {
   content: '';
   background: #569ea0;
   /* Old browsers */
@@ -117,7 +117,10 @@ nav .logo {
   width: 100%;
   position: absolute;
   left: 0;
-  margin-top: 2em;
+  margin-top: 1.8em;
+}
+.thin {
+  font-family: "Raleway", "sans-serif";
 }
 article {
   width: 70%;
