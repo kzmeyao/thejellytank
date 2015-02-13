@@ -110,19 +110,23 @@ nav {
   }
 }
 
+.gradient {
+  background: #569ea0; /* Old browsers */
+  background: -moz-linear-gradient(left,  #569ea0 0%, #35a569 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#569ea0), color-stop(100%,#35a569)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* IE10+ */
+  background: linear-gradient(to right,  #569ea0 0%,#35a569 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569ea0', endColorstr='#35a569',GradientType=1 ); /* IE6-9 */
+}
+
 .nav-gradient {
   position: relative;
 
   &:after {
+    .gradient;
     content: '';
-    background: #569ea0; /* Old browsers */
-    background: -moz-linear-gradient(left,  #569ea0 0%, #35a569 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#569ea0), color-stop(100%,#35a569)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #569ea0 0%,#35a569 100%); /* IE10+ */
-    background: linear-gradient(to right,  #569ea0 0%,#35a569 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569ea0', endColorstr='#35a569',GradientType=1 ); /* IE6-9 */
     height: 2px;
     width: 100%;
     position: absolute;
@@ -136,6 +140,34 @@ nav {
 }
 
 article {
-  width: 70%;
+  width: 75%;
   float: right;
+}
+
+section {
+  padding: 4em;
+  border-bottom: solid 1px #c7c7c7;
+}
+
+.intro {
+  margin-top: 2.5em;
+  color: #5a5a5a;
+  h1 {
+    font-weight: 400;
+  }
+  .thin {
+    margin-top: -.9em;
+    font-size: 1.5em;
+  }
+  button {
+    color: #ffffff;
+    border: none;
+    font-size: .9em;
+    border-radius: 4px;
+    padding: 1em 2em;
+    font-weight: 100;
+    outline: none;
+    margin-top: 2em;
+    .gradient;
+  }
 }
