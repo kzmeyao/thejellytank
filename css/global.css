@@ -65,7 +65,9 @@ li {
   clear: both;
 }
 .jelly {
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
+  bottom: -16px;
 }
 #jelly-hidden {
   display: none;
@@ -82,7 +84,7 @@ nav .nav-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
 nav .nav-wrapper {
@@ -153,7 +155,10 @@ article {
 }
 section {
   padding: 4em;
-  border-bottom: solid 1px #c7c7c7;
+  max-width: 560px;
+}
+.segment + .segment {
+  border-top: solid 1px #c7c7c7;
 }
 .intro {
   margin-top: 2.5em;
