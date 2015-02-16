@@ -6,6 +6,7 @@ var concatCSS = require('gulp-concat-css');
 var less = require('gulp-less');
 var sequence = require('gulp-sequence');
 var connect = require('gulp-connect');
+var react = require('gulp-react');
 
 gulp.task('clean', function (cb) {
   del([
@@ -17,7 +18,6 @@ gulp.task('scripts', function () {
   gulp.src([
     'js/vendor/jquery-1.10.2.min.js',
     'js/vendor/react.min.js',
-    'js/vendor/JSXTransformer.js',
     'js/vendor/react-router.min.js',
     'js/vendor/reflux.min.js',
     'js/vendor/TweenMax.min.js',
@@ -32,8 +32,9 @@ gulp.task('scripts', function () {
   gulp.src([
     'js/main.js'
   ])
+    .pipe(react())
     .pipe(concat('non-vendor.min.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });
 
