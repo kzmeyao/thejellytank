@@ -16,8 +16,10 @@ gulp.task('clean', function (cb) {
 gulp.task('scripts', function () {
   gulp.src([
     'js/vendor/jquery-1.10.2.min.js',
-    'js/vendor/underscore-min.js',
-    'js/vendor/backbone-min.js',
+    'js/vendor/react.min.js',
+    'js/vendor/JSXTransformer.js',
+    'js/vendor/react-router.min.js',
+    'js/vendor/reflux.min.js',
     'js/vendor/TweenMax.min.js',
     'js/vendor/ScrollToPlugin.min.js',
     'js/vendor/500px-js-sdk.js'
