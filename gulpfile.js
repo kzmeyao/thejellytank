@@ -22,14 +22,14 @@ gulp.task('scripts', function () {
     'js/vendor/reflux.min.js',
     'js/vendor/TweenMax.min.js',
     'js/vendor/ScrollToPlugin.min.js',
-    'js/vendor/500px-js-sdk.js'
+    'js/vendor/500px-js-sdk.js',
+    'js/vendor/bloom.js'
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 
   gulp.src([
-    'js/bloom.js',
     'js/main.js'
   ])
     .pipe(concat('non-vendor.min.js'))
