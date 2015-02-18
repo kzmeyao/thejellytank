@@ -34,7 +34,7 @@ gulp.task('scripts', function () {
   ])
     .pipe(react())
     .pipe(concat('non-vendor.min.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });
 

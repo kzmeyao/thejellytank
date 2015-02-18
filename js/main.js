@@ -37,7 +37,7 @@
   var Home = React.createClass({
     render: function () {
       var text = "... wait. You came for the jellies, didn't you?";
-      var buttonText = "Guity as Charged";
+      var buttonText = "Guilty as Charged";
       return (
         <article className="segment">
           <section className="intro">
