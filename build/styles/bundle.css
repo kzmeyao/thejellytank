@@ -841,13 +841,6 @@ textarea {
     page-break-after: avoid;
   }
 }
-html,
-body {
-  height: 100%;
-  position: relative;
-  font-family: "Lato", "sans-serif";
-}
-
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?965l1k");
@@ -913,6 +906,13 @@ body {
   content: "\e605";
 }
 
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Lato", "sans-serif";
+}
+
 ul,
 li {
   padding: 0;
@@ -976,6 +976,12 @@ nav a:focus {
   outline: 0;
 }
 
+@media only screen and (max-width: 1200px) {
+  nav {
+    width: 30%;
+  }
+}
+
 .nav-gradient {
   position: relative;
 }
@@ -1003,6 +1009,12 @@ nav a:focus {
 article {
   width: 60%;
   float: right;
+}
+
+@media only screen and (max-width: 1200px) {
+  article {
+    width: 70%;
+  }
 }
 
 section {
