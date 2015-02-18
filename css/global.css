@@ -73,6 +73,7 @@ li {
   display: none;
 }
 nav {
+  letter-spacing: .5px;
   width: 40%;
   background-image: url("/images/1.jpg");
   background-position-x: 100%;
@@ -98,6 +99,11 @@ nav .nav-logo {
 nav a {
   text-decoration: none;
   color: #ffffff;
+  transition: color .2s;
+}
+nav a:hover,
+nav a.active {
+  color: #569ea0;
 }
 nav a:focus {
   outline: 0;
@@ -132,7 +138,7 @@ section {
   max-width: 560px;
 }
 .segment + .segment {
-  border-top: solid 1px #c7c7c7;
+  border-top: solid 1px #d4d4d4;
 }
 .intro {
   margin-top: 2.5em;
@@ -149,7 +155,7 @@ section {
   color: #ffffff;
   border-width: 0;
   font-size: .9em;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 1em 2em;
   font-weight: 100;
   outline: none;

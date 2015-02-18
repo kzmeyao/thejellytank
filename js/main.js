@@ -37,15 +37,18 @@
   var Home = React.createClass({
     render: function () {
       var text = "... wait. You came for the jellies, didn't you?";
-      var buttonText = "Guilty as Charged";
+      var buttonText = "Guilty as charged";
       return (
-        <article className="segment">
-          <section className="intro">
-            <h1>I'm Kevin Z. Yao and I'm a creative</h1>
-            <div className="thin">{text}</div>
-            <button>{buttonText}</button>
-          </section>
-        </article>
+        <div>
+          <article className="segment">
+            <section className="intro">
+              <h1>I'm Kevin Z. Yao and I'm a creative</h1>
+              <div className="thin">{text}</div>
+              <button>{buttonText}</button>
+            </section>
+          </article>
+          <article className="segment"></article>
+        </div>
       );
     }
   });
