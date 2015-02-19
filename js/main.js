@@ -4,23 +4,34 @@
   var App = React.createClass({
     mixins: [{
       insertLogo: function () {
-        var e = this.refs.logo.getDOMNode();
-        e.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg>';
+        var desktopNode = this.refs.logoDesktop.getDOMNode();
+        var mobileNode = this.refs.logoMobile.getDOMNode();
+        desktopNode.innerHTML = mobileNode.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg>';
       }
     }],
     render: function () {
       return (
         <div>
-          <nav id="js-bloom">
+          <nav id="js-bloom" className="nav-desktop">
             <div className="nav-overlay">
               <div className="nav-wrapper">
-                <Link to="/" className="nav-logo" ref="logo"></Link>
+                <Link to="/" className="nav-logo" ref="logoDesktop"></Link>
                 <h2>
                   <span className="nav-gradient">THEJELLYTANK</span>
                 </h2>
                 <h3 className="thin">
                   <Link to="write">write</Link> x <Link to="shoot">shoot</Link> x <Link to="greet">greet</Link>
                 </h3>
+              </div>
+            </div>
+          </nav>
+          <nav className="nav-mobile">
+            <div className="nav-overlay">
+              <div className="nav-wrapper">
+                <div className="nav-logo" ref="logoMobile"></div>
+                <div className="icon icon-keyboard"></div>
+                <div className="icon icon-camera"></div>
+                <div className="icon icon-keyboard"></div>
               </div>
             </div>
           </nav>

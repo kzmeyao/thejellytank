@@ -3,8 +3,11 @@
 
 @jellyblue: #569ea0;
 @jellygreen: #35a569;
+@break-smaller: 1200px;
+@break-smallest: 1000px;
 @nav-width: 40%;
-@nav-width-smaller: 30%;
+@nav-width-smaller: 35%;
+@nav-width-smallest: 4em;
 
 html, body {
   height: 100%;
@@ -48,6 +51,16 @@ nav {
     color: #ffffff;
   }
 
+  @media only screen and (max-width: @break-smaller) {
+    width: @nav-width-smaller;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    width: @nav-width-smallest;
+  }
+}
+
+nav.nav-desktop {
+
   .nav-wrapper {
     margin: 4em;
     text-align: right;
@@ -70,8 +83,32 @@ nav {
     }
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: @nav-width-smaller;
+  @media only screen and (max-width: @break-smallest) {
+    display: none;
+  }
+}
+
+nav.nav-mobile {
+  display: none;
+
+  .nav-wrapper {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color .2s;
+    &:hover, &.active {
+      color: @jellyblue;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  @media only screen and (max-width: @break-smallest) {
+    display: block;
   }
 }
 
@@ -96,14 +133,20 @@ nav {
 article {
   width: 100% - @nav-width;
   float: right;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: @break-smaller) {
     width: 100% - @nav-width-smaller;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    width: 100%;
   }
 }
 
 section {
   padding: 4em;
   max-width: 560px;
+  @media only screen and (max-width: @break-smallest) {
+    padding: 0.5em 2em 2em 6em;
+  }
 }
 
 .segment + .segment {
@@ -130,5 +173,8 @@ section {
     outline: none;
     margin-top: 1.7em;
     .gradient-left(@jellyblue, @jellyblue, @jellygreen);
+  }
+  @media only screen and (max-width: @break-smallest) {
+    margin: 2.5em auto;
   }
 }
