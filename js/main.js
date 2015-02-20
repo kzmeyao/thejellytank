@@ -31,7 +31,7 @@
                 <div className="nav-logo" ref="logoMobile"></div>
                 <div className="icon icon-keyboard"></div>
                 <div className="icon icon-camera"></div>
-                <div className="icon icon-keyboard"></div>
+                <div className="icon icon-profile"></div>
               </div>
             </div>
           </nav>

@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?965l1k');
-  src: url('../fonts/icomoon.eot?#iefix965l1k') format('embedded-opentype'), url('../fonts/icomoon.woff?965l1k') format('woff'), url('../fonts/icomoon.ttf?965l1k') format('truetype'), url('../fonts/icomoon.svg?965l1k#icomoon') format('svg');
+  src: url('/fonts/icomoon.eot?7yf1b0');
+  src: url('/fonts/icomoon.eot?#iefix7yf1b0') format('embedded-opentype'), url('/fonts/icomoon.woff?7yf1b0') format('woff'), url('/fonts/icomoon.ttf?7yf1b0') format('truetype'), url('/fonts/icomoon.svg?7yf1b0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'icomoon';
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -20,9 +21,6 @@
 .icon-cancel:before {
   content: "\e600";
 }
-.icon-anchor:before {
-  content: "\e60a";
-}
 .icon-camera:before {
   content: "\e606";
 }
@@ -34,6 +32,9 @@
 }
 .icon-keyboard:before {
   content: "\e609";
+}
+.icon-profile:before {
+  content: "\e60a";
 }
 .icon-px:before {
   content: "\e601";
@@ -88,12 +89,12 @@ nav .nav-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
   nav {
     width: 35%;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   nav {
     width: 4em;
   }
@@ -118,7 +119,7 @@ nav.nav-desktop a.active {
 nav.nav-desktop a:focus {
   outline: 0;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   nav.nav-desktop {
     display: none;
   }
@@ -141,7 +142,7 @@ nav.nav-mobile a.active {
 nav.nav-mobile a:focus {
   outline: 0;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   nav.nav-mobile {
     display: block;
   }
@@ -171,12 +172,12 @@ article {
   width: 60%;
   float: right;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
   article {
     width: 65%;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   article {
     width: 100%;
   }
@@ -185,7 +186,7 @@ section {
   padding: 4em;
   max-width: 560px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   section {
     padding: 0.5em 2em 2em 6em;
   }
@@ -221,7 +222,7 @@ section {
   background-image: -o-linear-gradient(left, #569ea0 0%, #35a569 100%);
   background-image: linear-gradient(left, #569ea0 0%, #35a569 100%);
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .intro {
     margin: 2.5em auto;
   }
