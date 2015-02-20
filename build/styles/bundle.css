@@ -1003,6 +1003,11 @@ nav.nav-mobile .nav-wrapper {
   text-align: center;
 }
 
+nav.nav-mobile .nav-logo {
+  margin-top: 1em;
+  display: inline-block;
+}
+
 nav.nav-mobile a {
   text-decoration: none;
   color: #ffffff;
@@ -1016,6 +1021,11 @@ nav.nav-mobile a.active {
 
 nav.nav-mobile a:focus {
   outline: 0;
+}
+
+nav.nav-mobile .icon {
+  font-size: 1.5em;
+  padding: .5em;
 }
 
 @media only screen and (max-width: 900px) {

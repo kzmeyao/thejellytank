@@ -28,10 +28,10 @@
           <nav className="nav-mobile">
             <div className="nav-overlay">
               <div className="nav-wrapper">
-                <div className="nav-logo" ref="logoMobile"></div>
-                <div className="icon icon-keyboard"></div>
-                <div className="icon icon-camera"></div>
-                <div className="icon icon-profile"></div>
+                <Link to="/" className="nav-logo" ref="logoMobile"></Link>
+                <div className="icon"><Link to="write" className="icon-keyboard"></Link></div>
+                <div className="icon"><Link to="shoot" className="icon-camera"></Link></div>
+                <div className="icon"><Link to="greet" className="icon-profile"></Link></div>
               </div>
             </div>
           </nav>
