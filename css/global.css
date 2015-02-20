@@ -131,16 +131,22 @@ nav.nav-mobile .nav-wrapper {
   text-align: center;
 }
 nav.nav-mobile .nav-logo {
+  position: relative;
   margin-top: 1em;
   display: inline-block;
+}
+nav.nav-mobile #nav-active {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
 }
 nav.nav-mobile a {
   text-decoration: none;
   color: #ffffff;
   transition: color .2s;
 }
-nav.nav-mobile a:hover,
-nav.nav-mobile a.active {
+nav.nav-mobile a:hover {
   color: #569ea0;
 }
 nav.nav-mobile a:focus {

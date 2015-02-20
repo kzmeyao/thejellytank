@@ -96,15 +96,23 @@ nav.nav-mobile {
   }
 
   .nav-logo {
+    position: relative;
     margin-top: 1em;
     display: inline-block;
+  }
+
+  #nav-active {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
   }
 
   a {
     text-decoration: none;
     color: #ffffff;
     transition: color .2s;
-    &:hover, &.active {
+    &:hover {
       color: @jellyblue;
     }
     &:focus {
