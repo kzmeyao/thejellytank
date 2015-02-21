@@ -5,7 +5,13 @@
       Route = Router.Route,
       RouteHandler = Router.RouteHandler;
 
-  var activeStateController = {
+  var AnimationController = {
+    insertLogo: function () {
+      var desktopNode = this.refs.logoDesktop.getDOMNode();
+      var mobileNode = this.refs.logoMobile.getDOMNode();
+      desktopNode.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg>';
+      mobileNode.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg><div id="nav-active"><svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="#569ea0" /></svg></div>';
+    },
     assignNewState: function (to) {
       var icon = document.getElementsByClassName("icon-" + to)[0];
       var active = document.getElementById("nav-active");
@@ -27,14 +33,7 @@
   };
 
   var App = React.createClass({
-    mixins: [{
-      insertLogo: function () {
-        var desktopNode = this.refs.logoDesktop.getDOMNode();
-        var mobileNode = this.refs.logoMobile.getDOMNode();
-        desktopNode.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg>';
-        mobileNode.innerHTML = '<svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.25)" /><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="jelly" x="10" y="10" width="20" height="20" viewBox="0 0 8 8" enable-background="new 0 0 8 8" fill="#FFFFFF" xml:space="preserve"><path d="M4 0.2c-1.9 0-3.5 1.5-3.5 3.4 0 1.9 3.5 1.7 3.5 1.7s3.5 0.2 3.5-1.7C7.5 1.7 5.9 0.2 4 0.2z"/><g class="tentacles"><rect x="3.7" y="4.9" width="0.6" height="2.7"/><rect x="5.4" y="4.8" width="0.6" height="2.3"/><rect x="2.1" y="4.8" width="0.6" height="2.3"/></g></svg></svg><div id="nav-active"><svg height="40" width="40"><circle cx="20" cy="20" r="20" fill="#569ea0" /></svg></div>';
-      }
-    }, activeStateController],
+    mixins: [AnimationController],
     render: function () {
       return (
         <div>
@@ -76,7 +75,7 @@
   });
 
   var Home = React.createClass({
-    mixins: [activeStateController],
+    mixins: [AnimationController],
     render: function () {
       var text = "... wait. You came for the jellies, didn't you?";
       var buttonText = "Guilty as charged";
@@ -99,7 +98,7 @@
   });
 
   var Write = React.createClass({
-    mixins: [activeStateController],
+    mixins: [AnimationController],
     render: function () {
       return (
         <div></div>
@@ -111,7 +110,7 @@
   });
 
   var Shoot = React.createClass({
-    mixins: [activeStateController],
+    mixins: [AnimationController],
     render: function () {
       return (
         <div></div>
@@ -123,7 +122,7 @@
   });
 
   var Greet = React.createClass({
-    mixins: [activeStateController],
+    mixins: [AnimationController],
     render: function () {
       return (
         <div></div>
