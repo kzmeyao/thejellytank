@@ -47,7 +47,6 @@ ul, li {
   z-index: 3;
   background: none;
   position: fixed;
-  pointer-events: none;
 }
 
 nav {
@@ -60,7 +59,6 @@ nav {
   position: fixed;
 
   .nav-overlay {
-    position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
@@ -75,8 +73,15 @@ nav {
   }
 }
 
-nav.nav-desktop {
-  z-index: 1;
+.nav-desktop {
+  position: fixed;
+  width: @nav-width;
+  @media only screen and (max-width: @break-smaller) {
+    width: @nav-width-smaller;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    width: @nav-width-smallest;
+  }
 
   .nav-wrapper {
     margin: 4em;
@@ -105,8 +110,16 @@ nav.nav-desktop {
   }
 }
 
-nav.nav-mobile {
-  z-index: 0;
+.nav-mobile {
+  position: fixed;
+  opacity: 0;
+  width: @nav-width;
+  @media only screen and (max-width: @break-smaller) {
+    width: @nav-width-smaller;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    width: @nav-width-smallest;
+  }
 
   .nav-wrapper {
     text-align: center;
@@ -140,6 +153,10 @@ nav.nav-mobile {
   .icon {
     font-size: 1.5em;
     padding: .5em;
+  }
+
+  @media only screen and (max-width: @break-smallest) {
+    opacity: 1;
   }
 }
 

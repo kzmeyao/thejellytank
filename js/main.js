@@ -17,7 +17,7 @@
       var active = document.getElementById("nav-active");
       if (active != null) {
         var dist = active.offsetTop - icon.offsetTop + 22;
-        TweenMax.to(active, .3, {autoAlpha: .3, display: 'block'});
+        TweenMax.to(active, .3, {autoAlpha: .5, display: 'block'});
         TweenMax.to(active, .3, {y : -dist});
       }
     },
@@ -38,28 +38,24 @@
     render: function () {
       return (
         <div>
-          <div className="jelly-tank" id="js-bloom"></div>
-          <nav className="nav-desktop">
+          <nav id="js-bloom">
             <div className="nav-overlay">
-              <div className="nav-wrapper">
-                <Link to="/" className="nav-logo" ref="logoDesktop"></Link>
-                <h2>
-                  <span className="nav-gradient">THEJELLYTANK</span>
-                </h2>
-                <h3 className="thin">
-                  <Link to="write">write</Link> x <Link to="shoot">shoot</Link> x <Link to="greet">greet</Link>
-                </h3>
+              <div className="nav-mobile">
+                <div className="nav-wrapper">
+                  <Link to="/" className="nav-logo" ref="logoMobile"></Link>
+                  <div className="icon"><Link to="write" className="icon-keyboard"></Link></div>
+                  <div className="icon"><Link to="shoot" className="icon-camera"></Link></div>
+                  <div className="icon"><Link to="greet" className="icon-profile"></Link></div>
+                </div>
               </div>
-            </div>
-          </nav>
-          <nav id="js-bloom" className="nav-mobile">
-            <div className="nav-overlay">
-              <div className="state-placeholder"></div>
-              <div className="nav-wrapper">
-                <Link to="/" className="nav-logo" ref="logoMobile"></Link>
-                <div className="icon"><Link to="write" className="icon-keyboard"></Link></div>
-                <div className="icon"><Link to="shoot" className="icon-camera"></Link></div>
-                <div className="icon"><Link to="greet" className="icon-profile"></Link></div>
+              <div className="nav-desktop">
+                <div className="nav-wrapper">
+                  <Link to="/" className="nav-logo" ref="logoDesktop"></Link>
+                  <h2><span className="nav-gradient">THEJELLYTANK</span></h2>
+                  <h3 className="thin">
+                    <Link to="write">write</Link> x <Link to="shoot">shoot</Link> x <Link to="greet">greet</Link>
+                  </h3>
+                </div>
               </div>
             </div>
           </nav>
@@ -72,7 +68,7 @@
       this.insertLogo();
       var active = document.getElementsByClassName("active");
       if (active != null) {
-        var activeIcon = active[1].getAttribute("class");
+        var activeIcon = active[0].getAttribute("class");
         var match = /^icon-(.*) .*/.exec(activeIcon);
         if (match != null) {
           var that = this;

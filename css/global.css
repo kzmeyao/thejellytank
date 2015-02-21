@@ -80,7 +80,6 @@ li {
   z-index: 3;
   background: none;
   position: fixed;
-  pointer-events: none;
 }
 @media only screen and (max-width: 1100px) {
   .jelly-tank {
@@ -102,7 +101,6 @@ nav {
   position: fixed;
 }
 nav .nav-overlay {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -118,65 +116,93 @@ nav .nav-overlay {
     width: 4em;
   }
 }
-nav.nav-desktop {
-  z-index: 1;
+.nav-desktop {
+  position: fixed;
+  width: 40%;
 }
-nav.nav-desktop .nav-wrapper {
+@media only screen and (max-width: 1100px) {
+  .nav-desktop {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav-desktop {
+    width: 4em;
+  }
+}
+.nav-desktop .nav-wrapper {
   margin: 4em;
   text-align: right;
 }
-nav.nav-desktop .nav-logo {
+.nav-desktop .nav-logo {
   text-align: center;
   display: inline-block;
 }
-nav.nav-desktop a {
+.nav-desktop a {
   text-decoration: none;
   color: #ffffff;
   transition: color .2s;
 }
-nav.nav-desktop a:hover,
-nav.nav-desktop a.active {
+.nav-desktop a:hover,
+.nav-desktop a.active {
   color: #569ea0;
 }
-nav.nav-desktop a:focus {
+.nav-desktop a:focus {
   outline: 0;
 }
 @media only screen and (max-width: 900px) {
-  nav.nav-desktop {
+  .nav-desktop {
     display: none;
   }
 }
-nav.nav-mobile {
-  z-index: 0;
+.nav-mobile {
+  position: fixed;
+  opacity: 0;
+  width: 40%;
 }
-nav.nav-mobile .nav-wrapper {
+@media only screen and (max-width: 1100px) {
+  .nav-mobile {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav-mobile {
+    width: 4em;
+  }
+}
+.nav-mobile .nav-wrapper {
   text-align: center;
 }
-nav.nav-mobile .nav-logo {
+.nav-mobile .nav-logo {
   position: relative;
   margin-top: 1em;
   display: inline-block;
 }
-nav.nav-mobile #nav-active {
+.nav-mobile #nav-active {
   display: none;
   opacity: 0;
   position: absolute;
   top: 0;
 }
-nav.nav-mobile a {
+.nav-mobile a {
   text-decoration: none;
   color: #ffffff;
   transition: color .2s;
 }
-nav.nav-mobile a:hover {
+.nav-mobile a:hover {
   color: #569ea0;
 }
-nav.nav-mobile a:focus {
+.nav-mobile a:focus {
   outline: 0;
 }
-nav.nav-mobile .icon {
+.nav-mobile .icon {
   font-size: 1.5em;
   padding: .5em;
+}
+@media only screen and (max-width: 900px) {
+  .nav-mobile {
+    opacity: 1;
+  }
 }
 .nav-gradient {
   position: relative;
