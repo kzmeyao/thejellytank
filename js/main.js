@@ -69,6 +69,9 @@
     },
     componentDidMount: function () {
       this.insertLogo();
+      var activeIcon = document.getElementsByClassName("active")[1].getAttribute("class");
+      var that = this;
+      setTimeout(function(){that.assignNewState(/^icon-(.*) .*/.exec(activeIcon)[1]);}, 1000);
     }
   });
 
@@ -146,5 +149,3 @@
 
 })();
 //new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
-//var App = new AppRouter();
-//Backbone.history.start();

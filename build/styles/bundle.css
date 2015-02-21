@@ -964,6 +964,10 @@ nav .nav-overlay {
   }
 }
 
+nav.nav-desktop {
+  z-index: 1;
+}
+
 nav.nav-desktop .nav-wrapper {
   margin: 4em;
   text-align: right;
@@ -996,7 +1000,7 @@ nav.nav-desktop a:focus {
 }
 
 nav.nav-mobile {
-  display: none;
+  z-index: 0;
 }
 
 nav.nav-mobile .nav-wrapper {
@@ -1033,12 +1037,6 @@ nav.nav-mobile a:focus {
 nav.nav-mobile .icon {
   font-size: 1.5em;
   padding: .5em;
-}
-
-@media only screen and (max-width: 900px) {
-  nav.nav-mobile {
-    display: block;
-  }
 }
 
 .nav-gradient {

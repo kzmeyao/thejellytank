@@ -60,6 +60,7 @@ nav {
 }
 
 nav.nav-desktop {
+  z-index: 1;
 
   .nav-wrapper {
     margin: 4em;
@@ -89,7 +90,7 @@ nav.nav-desktop {
 }
 
 nav.nav-mobile {
-  display: none;
+  z-index: 0;
 
   .nav-wrapper {
     text-align: center;
@@ -123,10 +124,6 @@ nav.nav-mobile {
   .icon {
     font-size: 1.5em;
     padding: .5em;
-  }
-
-  @media only screen and (max-width: @break-smallest) {
-    display: block;
   }
 }
 
