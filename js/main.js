@@ -17,7 +17,7 @@
       var active = document.getElementById("nav-active");
       if (active != null) {
         var dist = active.offsetTop - icon.offsetTop + 22;
-        TweenMax.to(active, .3, {autoAlpha: .5, display: 'block'});
+        TweenMax.to(active, .3, {autoAlpha: .3, display: 'block'});
         TweenMax.to(active, .3, {y : -dist});
       }
     },
@@ -32,12 +32,14 @@
     }
   };
 
+  //TODO: MAKE ONE NAV, ONE BACKGROUND
   var App = React.createClass({
     mixins: [AnimationController],
     render: function () {
       return (
         <div>
-          <nav id="js-bloom" className="nav-desktop">
+          <div className="jelly-tank" id="js-bloom"></div>
+          <nav className="nav-desktop">
             <div className="nav-overlay">
               <div className="nav-wrapper">
                 <Link to="/" className="nav-logo" ref="logoDesktop"></Link>
@@ -50,7 +52,7 @@
               </div>
             </div>
           </nav>
-          <nav className="nav-mobile">
+          <nav id="js-bloom" className="nav-mobile">
             <div className="nav-overlay">
               <div className="state-placeholder"></div>
               <div className="nav-wrapper">
@@ -68,9 +70,15 @@
     },
     componentDidMount: function () {
       this.insertLogo();
-      var activeIcon = document.getElementsByClassName("active")[1].getAttribute("class");
-      var that = this;
-      setTimeout(function(){that.assignNewState(/^icon-(.*) .*/.exec(activeIcon)[1]);}, 1000);
+      var active = document.getElementsByClassName("active");
+      if (active != null) {
+        var activeIcon = active[1].getAttribute("class");
+        var match = /^icon-(.*) .*/.exec(activeIcon);
+        if (match != null) {
+          var that = this;
+          setTimeout(function(){that.assignNewState(match[1]);}, 1000);
+        }
+      }
     }
   });
 
@@ -85,7 +93,7 @@
             <section className="intro">
               <h1>I'm Kevin Z. Yao and I'm a creative</h1>
               <div className="thin">{text}</div>
-              <button>{buttonText}</button>
+              <button onClick={this.bloom}>{buttonText}</button>
             </section>
           </article>
           <article className="segment"></article>
@@ -94,6 +102,9 @@
     },
     componentDidMount: function () {
       this.restoreState();
+    },
+    bloom: function () {
+      new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
     }
   });
 
@@ -147,4 +158,3 @@
   });
 
 })();
-//new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);

@@ -928,10 +928,32 @@ li {
   position: fixed;
   overflow: hidden;
   bottom: -16px;
+  z-index: 2;
 }
 
 #jelly-hidden {
   display: none;
+}
+
+.jelly-tank {
+  width: 40%;
+  height: 100%;
+  z-index: 3;
+  background: none;
+  position: fixed;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .jelly-tank {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .jelly-tank {
+    width: 4em;
+  }
 }
 
 nav {

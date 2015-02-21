@@ -28,10 +28,26 @@ ul, li {
   position: fixed;
   overflow: hidden;
   bottom: -16px;
+  z-index: 2;
 }
 
 #jelly-hidden {
   display: none;
+}
+
+.jelly-tank {
+  width: @nav-width;
+  @media only screen and (max-width: @break-smaller) {
+    width: @nav-width-smaller;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    width: @nav-width-smallest;
+  }
+  height: 100%;
+  z-index: 3;
+  background: none;
+  position: fixed;
+  pointer-events: none;
 }
 
 nav {
