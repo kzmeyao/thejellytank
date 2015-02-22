@@ -80,16 +80,26 @@
 
   var Home = React.createClass({
     mixins: [AnimationController],
+    getInitialState: function () {
+      return {
+        isOn: false
+      };
+    },
     render: function () {
-      var text = "... wait. You came for the jellies, didn't you?";
-      var buttonText = "Guilty as charged";
+      var text = "... wait. You came for the jellies, didn't you?"; //only because intellij complains
+      var button;
+      if (this.state.isOn) {
+        button = <button onClick={this.stop}>Nevermind</button>;
+      } else {
+        button = <button onClick={this.start}>Guilty as charged</button>;
+      }
       return (
         <div>
           <article className="segment">
             <section className="intro">
               <h1>I'm Kevin Z. Yao and I'm a creative</h1>
               <div className="thin">{text}</div>
-              <button onClick={this.bloom}>{buttonText}</button>
+              {button}
             </section>
           </article>
           <article className="segment"></article>
@@ -97,10 +107,16 @@
       );
     },
     componentDidMount: function () {
+      this.bloom = new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
       this.restoreState();
     },
-    bloom: function () {
-      new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
+    start: function () {
+      var that = this;
+      this.setState({isOn : true}, function () {that.bloom.start()});
+    },
+    stop: function () {
+      var that = this;
+      this.setState({isOn : false}, function () {that.bloom.stop()});
     }
   });
 
