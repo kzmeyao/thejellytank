@@ -16,17 +16,17 @@ gulp.task('clean', function (cb) {
 
 gulp.task('scripts', function () {
   gulp.src([
-    'js/vendor/jquery-1.10.2.min.js',
     'js/vendor/react.min.js',
     'js/vendor/react-router.min.js',
     'js/vendor/reflux.min.js',
     'js/vendor/TweenMax.min.js',
     'js/vendor/ScrollToPlugin.min.js',
     'js/vendor/500px-js-sdk.js',
-    'js/vendor/bloom.js'
+    'js/vendor/bloom.js',
+    'js/vendor/particles.js'
   ])
     .pipe(concat('vendor.min.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('build/js'));
 
   gulp.src([
