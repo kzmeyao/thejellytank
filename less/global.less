@@ -212,6 +212,7 @@ section {
     font-size: 1.5em;
   }
   button {
+    width: 174px; //I'm sorry
     font-family: "Lato", "sans-serif";
     color: #ffffff;
     border-width: 0;
@@ -221,6 +222,10 @@ section {
     outline: none;
     margin-top: 1.7em;
     .gradient-left(@jellyblue, @jellyblue, @jellygreen);
+    transition: opacity .7s;
+    &:hover {
+      opacity: .7;
+    }
   }
   @media only screen and (max-width: @break-smallest) {
     margin: 2.5em auto;

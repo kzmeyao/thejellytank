@@ -1163,6 +1163,7 @@ section {
 }
 
 .intro button {
+  width: 174px;
   font-family: "Lato", "sans-serif";
   color: #ffffff;
   border-width: 0;
@@ -1178,6 +1179,11 @@ section {
   background-image: -ms-linear-gradient(left, #569ea0 0%, #35a569 100%);
   background-image: -o-linear-gradient(left, #569ea0 0%, #35a569 100%);
   background-image: linear-gradient(left, #569ea0 0%, #35a569 100%);
+  transition: opacity .7s;
+}
+
+.intro button:hover {
+  opacity: .7;
 }
 
 @media only screen and (max-width: 900px) {

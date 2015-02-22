@@ -2,7 +2,6 @@ var Bloom = function(jellySvg, tankId, color, frequency, carryingCapacity) {
   this.isHidden = false;
   this.jellySvg = jellySvg;
   this.tank = document.getElementById(tankId);
-  console.log(this.tank);
   this.color = color;
   this.frequency = frequency;
   this.carryingCapacity = carryingCapacity;
