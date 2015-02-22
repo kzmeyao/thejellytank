@@ -107,6 +107,17 @@ nav .nav-overlay {
     width: 4em;
   }
 }
+.notice {
+  display: inline-block;
+  color: #999999;
+}
+.notice .icon {
+  font-size: 1.5em;
+  margin-right: .3em;
+}
+.notice span {
+  vertical-align: middle;
+}
 .nav-desktop {
   position: fixed;
   width: 40%;

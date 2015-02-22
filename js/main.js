@@ -112,7 +112,7 @@
           </article>
           <article className="segment">
             <section>
-              <span className="icon-keyboard">LATEST POST</span>
+              <div className="notice"><span className="icon icon-keyboard"></span><span>LATEST POSTS</span></div>
             </section>
           </article>
         </div>
