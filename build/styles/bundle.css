@@ -941,6 +941,7 @@ li {
   font-family: "arial", sans-serif;
   position: fixed;
   visibility: hidden;
+  pointer-events: none;
 }
 
 nav {

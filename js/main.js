@@ -76,6 +76,9 @@
         }
       }
       document.getElementsByTagName("nav")[0].style.height = window.innerHeight + 60 + "px";
+      window.onresize = function () {
+        document.getElementsByTagName("nav")[0].style.height = window.innerHeight + 60 + "px";
+      };
       var particles = new Particles("nav");
       for (var i = 0; i < 50; i++) {
         var particle = document.createElement('div');
