@@ -104,7 +104,7 @@
       return (
         <div>
           <article className="segment">
-            <section className="intro">
+            <section className="intro first-section">
               <h1>I'm Kevin Z. Yao and I'm a creative</h1>
               <div className="thin sub-intro">{text}</div>
               {button}
@@ -159,8 +159,21 @@
   var Greet = React.createClass({
     mixins: [AnimationController],
     render: function () {
+      var headerOne = "hello.";
+      var headerTwo = "what's with the jellies?";
       return (
-        <div></div>
+        <div>
+          <article className="segment greet-page">
+            <section className="first-section">
+              <h1>{headerOne}</h1>
+              I'm Kevin Z. Yao, and The Jelly Tank is my creative space for displaying what I do outside of work. I'm a developer who hacks at the frontend, backend, and everything in between. However, I am also an all-around creative person. Whether it's through photography, design, coding projects, or writing, I am constantly looking for new ways to stretch my artistic side. I have been inspired by many things in life, this is my way of giving back. Hopefully, there is something here that will inspire you.
+              <h1>{headerTwo}</h1>
+              "What we see before us is just one tiny part of the world. We get in the habit of thinking, This is the world, but that's not true at all. The real world is a much darker and deeper place than this, and much of it is occupied by jellyfish and things."
+              <br /><br />
+              - Haruki Murakami, <em>The Windup Bird Chronicles</em>
+            </section>
+          </article>
+        </div>
       )
     },
     componentDidMount: function () {

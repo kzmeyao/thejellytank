@@ -175,10 +175,6 @@ article {
   @media only screen and (max-width: @break-smaller) {
     width: 100%;
   }
-  @media only screen and (max-width: @break-smallest) {
-    width: 100%;
-    font-size: .8em;
-  }
 }
 
 section {
@@ -188,7 +184,18 @@ section {
     padding: 3em 2.5em 4em 6.5em;
   }
   @media only screen and (max-width: @break-smallest) {
-    padding: 2em 2.5em 1em 6.5em;
+    margin: 0 auto;
+    padding: 2em 1.5em 1em 5.5em;
+  }
+}
+
+.first-section {
+  margin-top: 2em;
+  @media only screen and (max-width: @break-smaller) {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: @break-smallest) {
+    margin-top: 1em;
   }
 }
 
@@ -197,7 +204,6 @@ section {
 }
 
 .intro {
-  margin-top: 2.5em;
   color: #5a5a5a;
   h1 {
     line-height: 1.3em;
@@ -208,6 +214,7 @@ section {
     font-size: 1.5em;
   }
   button {
+    font-size: .9em;
     width: 174px; //I'm sorry
     font-family: "Lato", "sans-serif";
     color: #ffffff;
@@ -226,17 +233,22 @@ section {
       display: none;
     }
   }
-  @media only screen and (max-width: @break-smaller) {
-    margin-top: 0;
-  }
   @media only screen and (max-width: @break-smallest) {
     text-align: center;
-    margin: 2.5em auto;
   }
 
   .sub-intro {
     @media only screen and (max-width: @break-smallest) {
       display: none;
     }
+  }
+}
+
+.greet-page {
+  font-size: 1.1em;
+  color: #5a5a5a;
+  font-weight: 100;
+  h1 {
+    font-family: "Raleway", "sans-serif";
   }
 }
