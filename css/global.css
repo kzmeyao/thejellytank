@@ -234,7 +234,7 @@ section {
   }
 }
 .first-section {
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 @media only screen and (max-width: 800px) {
   .first-section {
@@ -289,17 +289,11 @@ section {
   }
 }
 @media only screen and (max-width: 500px) {
-  .intro {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 500px) {
   .intro .sub-intro {
     display: none;
   }
 }
 .greet-page {
-  font-size: 1.1em;
   color: #5a5a5a;
   font-weight: 100;
 }
