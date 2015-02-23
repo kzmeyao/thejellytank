@@ -2,7 +2,10 @@
 @import "icon-fonts";
 
 @jellyblue: #569ea0;
+@jellybluelighter: #66babd;
 @jellygreen: #35a569;
+@jellygreenlighter: #4ecb80;
+
 @break-smaller: 800px;
 @break-smallest: 500px;
 @nav-width: 40%;
@@ -18,6 +21,14 @@ html, body {
 ul, li {
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .cf {
@@ -96,7 +107,6 @@ nav {
   }
 
   a {
-    text-decoration: none;
     color: #ffffff;
     transition: color .2s;
     &:hover, &.active {
@@ -246,7 +256,27 @@ section {
 
   color: #5a5a5a;
   font-weight: 100;
+
   h1 {
     font-family: "Raleway", "sans-serif";
+  }
+
+  ul {
+    margin-bottom: 5em;
+  }
+
+  li {
+    font-size: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+
+    a {
+      color: @jellybluelighter;
+      transition: color .3s;
+
+      &:hover {
+        color: @jellygreenlighter;
+      }
+    }
   }
 }

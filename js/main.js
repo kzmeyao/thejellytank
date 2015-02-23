@@ -32,7 +32,6 @@
     }
   };
 
-  //TODO: MAKE ONE NAV, ONE BACKGROUND
   var App = React.createClass({
     mixins: [AnimationController],
     render: function () {
@@ -165,16 +164,42 @@
     render: function () {
       var headerOne = "hello.";
       var headerTwo = "what's with the jellies?";
+      var headerThree = "stalk me";
       return (
         <div>
           <article className="segment greet-page">
             <section className="first-section">
               <h1>{headerOne}</h1>
-              I'm Kevin Z. Yao, and The Jelly Tank is my creative space for displaying what I do outside of work. I'm a developer who hacks at the frontend, backend, and everything in between. However, I am also an all-around creative person. Whether it's through photography, design, coding projects, or writing, I am constantly looking for new ways to stretch my artistic side. I have been inspired by many things in life, this is my way of giving back. Hopefully, there is something here that will inspire you.
+              <p>I'm Kevin Z. Yao, and The Jelly Tank is my creative space for displaying what I do outside of work. I'm a developer who hacks at the frontend, backend, and everything in between. However, I am also an all-around creative person. Whether it's through photography, design, coding projects, or writing, I am constantly looking for new ways to stretch my artistic side. I have been inspired by many things in life, this is my way of giving back. Hopefully, there is something here that will inspire you.</p>
               <h1>{headerTwo}</h1>
-              "What we see before us is just one tiny part of the world. We get in the habit of thinking, This is the world, but that's not true at all. The real world is a much darker and deeper place than this, and much of it is occupied by jellyfish and things."
+              <p>"What we see before us is just one tiny part of the world. We get in the habit of thinking, This is the world, but that's not true at all. The real world is a much darker and deeper place than this, and much of it is occupied by jellyfish and things."
               <br /><br />
               - Haruki Murakami, <em>The Windup Bird Chronicles</em>
+              </p>
+              <br />
+              <ul>
+                <li>
+                  <a href="mailto:kzmeyao@gmail.com" target="_blank" className="icon-envelope"></a>
+                </li>
+                <li>
+                  <a href="https://github.com/kzmeyao" target="_blank" className="icon-github"></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/kzmeyao/" target="_blank" className="icon-linkedin"></a>
+                </li>
+                <li>
+                  <a href="http://instagram.com/kzmeyao" target="_blank" className="icon-instagram"></a>
+                </li>
+                <li>
+                  <a href="http://500px.com/kzmeyao" target="_blank" className="icon-px"></a>
+                </li>
+                <li>
+                  <a href="https://gimmebar.com/loves/kzmeyao" target="_blank" className="icon-plus"></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/kzmeyao" target="_blank" className="icon-twitter"></a>
+                </li>
+              </ul>
             </section>
           </article>
         </div>

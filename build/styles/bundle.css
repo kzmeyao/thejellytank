@@ -920,6 +920,14 @@ li {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .cf {
   clear: both;
 }
@@ -1010,7 +1018,6 @@ nav .nav-overlay {
 }
 
 .nav-desktop a {
-  text-decoration: none;
   color: #ffffff;
   transition: color .2s;
 }
@@ -1204,4 +1211,23 @@ section {
 
 .greet-page h1 {
   font-family: "Raleway", "sans-serif";
+}
+
+.greet-page ul {
+  margin-bottom: 5em;
+}
+
+.greet-page li {
+  font-size: 1.5em;
+  margin-right: 1em;
+  display: inline-block;
+}
+
+.greet-page li a {
+  color: #66babd;
+  transition: color .3s;
+}
+
+.greet-page li a:hover {
+  color: #4ecb80;
 }
