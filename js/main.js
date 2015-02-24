@@ -89,18 +89,17 @@
     }
   });
 
+  var HomeState = {
+    isOn : false
+  };
+
   var Home = React.createClass({
     mixins: [AnimationController],
-    getInitialState: function () {
-      return {
-        isOn: false
-      };
-    },
     render: function () {
       var text = "... wait. You came for the jellies, didn't you?"; //only because intellij complains
       var button;
-      if (this.state.isOn) {
-        button = <button onClick={this.stop}>Nevermind</button>;
+      if (HomeState.isOn) {
+        button = <button onClick={this.stop}>Not really</button>;
       } else {
         button = <button onClick={this.start}>Guilty as charged</button>;
       }
@@ -126,12 +125,14 @@
       this.restoreState();
     },
     start: function () {
-      var that = this;
-      this.setState({isOn : true}, function () {that.bloom.start()});
+      HomeState.isOn = true;
+      this.bloom.start();
+      this.forceUpdate();
     },
     stop: function () {
-      var that = this;
-      this.setState({isOn : false}, function () {that.bloom.stop()});
+      HomeState.isOn = false;
+      this.bloom.stop();
+      this.forceUpdate();
     }
   });
 
