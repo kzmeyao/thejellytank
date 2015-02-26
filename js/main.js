@@ -165,7 +165,6 @@
     render: function () {
       var headerOne = "hello.";
       var headerTwo = "what's with the jellies?";
-      var headerThree = "stalk me";
       return (
         <div>
           <article className="segment greet-page">
