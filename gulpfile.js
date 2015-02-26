@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var del = require('del');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -7,6 +8,7 @@ var less = require('gulp-less');
 var sequence = require('gulp-sequence');
 var connect = require('gulp-connect');
 var react = require('gulp-react');
+var markdown = require('gulp-markdown-to-json');
 
 gulp.task('clean', function (cb) {
   del([
@@ -62,7 +64,15 @@ gulp.task('styles', ['less'], function () {
     .pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('markdown', function(){
+  gulp.src('posts/**/*.md')
+    .pipe(gutil.buffer())
+    .pipe(markdown('posts.json'))
+    .pipe(gulp.dest('build/js/'))
+});
+
 gulp.task('watch', function () {
+  gulp.watch('posts/**.*.js', ['markdown']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('less/**/*.less', ['styles']);
 });
@@ -71,4 +81,4 @@ gulp.task('server', function() {
   connect.server({port: 4000});
 });
 
-gulp.task('default', sequence('clean', ['styles', 'scripts', 'server'], 'watch'));
+gulp.task('default', sequence('clean', ['styles', 'scripts', 'markdown', 'server'], 'watch'));

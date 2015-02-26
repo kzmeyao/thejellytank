@@ -82,7 +82,7 @@ a {
 }
 .particle {
   overflow: hidden;
-  font-size: 20px;
+  font-size: 10px;
   font-family: "arial", sans-serif;
   position: fixed;
   visibility: hidden;
@@ -111,7 +111,7 @@ nav .nav-overlay {
 }
 @media only screen and (max-width: 800px) {
   nav {
-    width: 4em;
+    width: 3.6em;
   }
 }
 .notice {
@@ -131,7 +131,7 @@ nav .nav-overlay {
 }
 @media only screen and (max-width: 800px) {
   .nav-desktop {
-    width: 4em;
+    width: 3.6em;
     display: none;
   }
 }
@@ -161,7 +161,7 @@ nav .nav-overlay {
 }
 @media only screen and (max-width: 800px) {
   .nav-mobile {
-    width: 4em;
+    width: 3.6em;
     opacity: 1;
   }
 }
@@ -236,7 +236,7 @@ section {
 @media only screen and (max-width: 500px) {
   section {
     margin: 0 auto;
-    padding: 2em 1.5em 1em 5.5em;
+    padding: 2em 1.5em 1em 5.1em;
   }
 }
 .first-section {
