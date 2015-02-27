@@ -89,16 +89,21 @@
     }
   });
 
-  var HomeState = {
-    isOn : false
+  var HomeState = function () {
+    var isOn = false;
+    var isJelly = false;
+    var bloom = null;
   };
 
+  var homeState = new HomeState();
+
+  var bloom;
   var Home = React.createClass({
     mixins: [AnimationController],
     render: function () {
       var text = "... wait. You came for the jellies, didn't you?"; //only because intellij complains
       var button;
-      if (HomeState.isOn) {
+      if (homeState.isOn) {
         button = <button onClick={this.stop}>Not really</button>;
       } else {
         button = <button onClick={this.start}>Guilty as charged</button>;
@@ -121,17 +126,20 @@
       );
     },
     componentDidMount: function () {
-      this.bloom = new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
+      if (!homeState.isJelly) {
+        homeState.bloom = new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
+        homeState.isJelly = true;
+      }
       this.restoreState();
     },
     start: function () {
-      HomeState.isOn = true;
-      this.bloom.start();
+      homeState.isOn = true;
+      homeState.bloom.start();
       this.forceUpdate();
     },
     stop: function () {
-      HomeState.isOn = false;
-      this.bloom.stop();
+      homeState.isOn = false;
+      homeState.bloom.stop();
       this.forceUpdate();
     }
   });
