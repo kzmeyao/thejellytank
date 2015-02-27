@@ -90,9 +90,9 @@
   });
 
   var HomeState = function () {
-    var isOn = false;
-    var isJelly = false;
-    var bloom = null;
+    this.isOn = false;
+    this.isJelly = false;
+    this.bloom = null;
   };
 
   var homeState = new HomeState();
