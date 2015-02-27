@@ -72,7 +72,7 @@ gulp.task('markdown', function(){
 });
 
 gulp.task('watch', function () {
-  gulp.watch('posts/**.*.js', ['markdown']);
+  gulp.watch('posts/**.*.md', ['markdown']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('less/**/*.less', ['styles']);
 });
