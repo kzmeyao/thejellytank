@@ -9,6 +9,7 @@ var sequence = require('gulp-sequence');
 var connect = require('gulp-connect');
 var react = require('gulp-react');
 var markdown = require('gulp-markdown-to-json');
+var inject = require('gulp-inject-string');
 
 gulp.task('clean', function (cb) {
   del([
@@ -65,9 +66,11 @@ gulp.task('styles', ['less'], function () {
 });
 
 gulp.task('markdown', function(){
-  gulp.src('posts/**/*.md')
+  return gulp.src('posts/**/*.md')
     .pipe(gutil.buffer())
-    .pipe(markdown('posts.json'))
+    .pipe(markdown('posts.js'))
+    .pipe(inject.prepend("var Posts = "))
+    .pipe(inject.append(";var posts=[];for(var post in Posts){if(Posts.hasOwnProperty(post)){posts.push(Posts[post]);}};"))
     .pipe(gulp.dest('build/js/'))
 });
 

@@ -130,6 +130,7 @@
         homeState.bloom = new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
         homeState.isJelly = true;
       }
+      console.log(posts);
       this.restoreState();
     },
     start: function () {
