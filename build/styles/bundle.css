@@ -984,6 +984,7 @@ nav .nav-overlay {
 .notice {
   display: inline-block;
   color: #999999;
+  margin-bottom: 1.5em;
 }
 
 .notice .icon {
@@ -1229,5 +1230,21 @@ section {
 }
 
 .greet-page li a:hover {
+  color: #4ecb80;
+}
+
+.post {
+  font-weight: 100;
+}
+
+.post h1 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #5a5a5a;
+}
+
+.post h2 {
+  font-size: .9em;
+  font-weight: 100;
   color: #4ecb80;
 }
