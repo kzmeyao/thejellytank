@@ -108,6 +108,7 @@
       } else {
         button = <button onClick={this.start}>Guilty as charged</button>;
       }
+      var post = posts[0];
       return (
         <div>
           <article className="segment">
@@ -120,6 +121,8 @@
           <article className="segment">
             <section>
               <div className="notice"><span className="icon icon-keyboard"></span><span>LATEST POSTS</span></div>
+              <div className="post" dangerouslySetInnerHTML={{__html: post.body}}>
+              </div>
             </section>
           </article>
         </div>
@@ -130,7 +133,6 @@
         homeState.bloom = new Bloom("jelly-hidden", "js-bloom", "#ffffff", 1200, 1000);
         homeState.isJelly = true;
       }
-      console.log(posts);
       this.restoreState();
     },
     start: function () {

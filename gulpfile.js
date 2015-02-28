@@ -66,16 +66,16 @@ gulp.task('styles', ['less'], function () {
 });
 
 gulp.task('markdown', function(){
-  return gulp.src('posts/**/*.md')
+  gulp.src('posts/**/*.md')
     .pipe(gutil.buffer())
     .pipe(markdown('posts.js'))
     .pipe(inject.prepend("var Posts = "))
     .pipe(inject.append(";var posts=[];for(var post in Posts){if(Posts.hasOwnProperty(post)){posts.push(Posts[post]);}};"))
-    .pipe(gulp.dest('build/js/'))
+    .pipe(gulp.dest('build/js/'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('posts/**.*.md', ['markdown']);
+  gulp.watch('posts/**/*.md', ['markdown']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('less/**/*.less', ['styles']);
 });
