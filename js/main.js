@@ -151,7 +151,17 @@
     mixins: [AnimationController],
     render: function () {
       return (
-        <div></div>
+        <div>
+          <article className="segment">
+            <section className="intro first-section">
+              {posts.map(function(post, i) {
+                var dateAndTags = (post.date + " [" + post.tags + "]").toUpperCase();
+                var title = post.title;
+                return <div className="post"><h2>{dateAndTags}</h2><h1>{title}</h1></div>
+              })}
+            </section>
+          </article>
+        </div>
       )
     },
     componentDidMount: function () {
