@@ -150,11 +150,16 @@
   var Write = React.createClass({
     mixins: [AnimationController],
     render: function () {
+      var reversedPosts = [];
+      var len = posts.length;
+      for (var i = (len - 1); i >= 0; i--) {
+        reversedPosts.push(posts[i]);
+      }
       return (
         <div>
           <article className="segment">
             <section className="intro first-section">
-              {posts.reverse().map(function(post, i) {
+              {reversedPosts.map(function(post, i) {
                 var dateAndTags = (post.date + " [" + post.tags + "]").toUpperCase();
                 var title = post.title;
                 return <Link to="post" className="post" params={{postId : post.key}}><h2>{dateAndTags}</h2><h1>{title}</h1></Link>
