@@ -1239,6 +1239,7 @@ p {
 }
 
 .post {
+  display: block;
   font-weight: 100;
 }
 
@@ -1252,4 +1253,8 @@ p {
   font-size: .8em;
   font-weight: 100;
   color: #4ecb80;
+}
+
+.post + .post {
+  margin-top: 2em;
 }

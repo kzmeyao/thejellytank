@@ -66,7 +66,7 @@
     componentDidMount: function () {
       this.insertLogo();
       var active = document.getElementsByClassName("active");
-      if (active != null) {
+      if (active != null && active[0] != null) {
         var activeIcon = active[0].getAttribute("class");
         var match = /^nav-(.*) .*/.exec(activeIcon);
         if (match != null && match[1] !== "logo") {
@@ -108,7 +108,7 @@
       } else {
         button = <button onClick={this.start}>Guilty as charged</button>;
       }
-      var post = posts[0];
+      var post = posts[posts.length - 1];
       return (
         <div>
           <article className="segment">
@@ -154,10 +154,10 @@
         <div>
           <article className="segment">
             <section className="intro first-section">
-              {posts.map(function(post, i) {
+              {posts.reverse().map(function(post, i) {
                 var dateAndTags = (post.date + " [" + post.tags + "]").toUpperCase();
                 var title = post.title;
-                return <div className="post"><h2>{dateAndTags}</h2><h1>{title}</h1></div>
+                return <Link to="post" className="post" params={{postId : post.key}}><h2>{dateAndTags}</h2><h1>{title}</h1></Link>
               })}
             </section>
           </article>
@@ -231,10 +231,26 @@
     }
   });
 
+  var Post = React.createClass({
+    mixins: [Router.State],
+    render: function () {
+      return (
+        <div>
+          <article className="segment">
+            <section className="intro first-section">
+              <div className="post" dangerouslySetInnerHTML={{__html: Posts[this.getParams().postId].body}} />
+            </section>
+          </article>
+        </div>
+      )
+    }
+  });
+
   var routes = (
     <Route name="app" path="/" handler={App}>
       <Route name="shoot" handler={Shoot}/>
       <Route name="write" handler={Write}/>
+      <Route name="post" path="/write/:postId" handler={Post} />
       <Route name="greet" handler={Greet}/>
       <DefaultRoute handler={Home}/>
     </Route>

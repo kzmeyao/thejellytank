@@ -288,6 +288,7 @@ p {
 }
 
 .post {
+  display: block;
   font-weight: 100;
   h1 {
     font-weight: 400;
@@ -299,4 +300,8 @@ p {
     font-weight: 100;
     color: @jellygreenlighter;
   }
+}
+
+.post + .post {
+  margin-top: 2em;
 }

@@ -327,6 +327,7 @@ p {
   color: #5a5a5a;
 }
 .post {
+  display: block;
   font-weight: 100;
 }
 .post h1 {
@@ -338,4 +339,7 @@ p {
   font-size: .8em;
   font-weight: 100;
   color: #4ecb80;
+}
+.post + .post {
+  margin-top: 2em;
 }
