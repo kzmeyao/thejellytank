@@ -1247,6 +1247,7 @@ p {
   font-weight: 400;
   font-size: 1.5em;
   color: #5a5a5a;
+  margin-bottom: .5em;
 }
 
 .post h2 {
@@ -1257,4 +1258,12 @@ p {
 
 .post + .post {
   margin-top: 2em;
+}
+
+a.post {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+a.post:hover {
+  border-bottom: 1px solid #66babd;
 }
