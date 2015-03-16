@@ -121,7 +121,7 @@
           <article className="segment">
             <section>
               <div className="notice"><span className="icon icon-keyboard"></span><span>LATEST POSTS</span></div>
-              <div className="post" dangerouslySetInnerHTML={{__html: post.body}}>
+              <div className="post" dangerouslySetInnerHTML={{__html: post.preview}}>
               </div>
             </section>
           </article>
