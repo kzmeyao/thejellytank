@@ -1256,6 +1256,10 @@ p {
   color: #4ecb80;
 }
 
+.post .follow {
+  color: #999999;
+}
+
 .post + .post {
   margin-top: 2em;
 }

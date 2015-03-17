@@ -125,6 +125,7 @@
                 <h1>{post.title}</h1>
                 <h2>{post.date}</h2>
                 <p>{post.preview}</p>
+                <Link to="post" className="follow" params={{postId : post.key}}>... see more</Link>
               </div>
             </section>
           </article>
