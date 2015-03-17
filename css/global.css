@@ -341,7 +341,10 @@ p {
   font-weight: 100;
   color: #4ecb80;
 }
-.post .follow {
+.post a {
+  color: #66babd;
+}
+.post a.follow {
   color: #999999;
 }
 .post + .post {
