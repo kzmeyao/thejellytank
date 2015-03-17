@@ -121,7 +121,10 @@
           <article className="segment">
             <section>
               <div className="notice"><span className="icon icon-keyboard"></span><span>LATEST POSTS</span></div>
-              <div className="post" dangerouslySetInnerHTML={{__html: post.preview}}>
+              <div className="post">
+                <h1>{post.title}</h1>
+                <h2>{post.date}</h2>
+                <p>{post.preview}</p>
               </div>
             </section>
           </article>
