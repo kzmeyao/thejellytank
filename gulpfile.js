@@ -29,7 +29,7 @@ gulp.task('scripts', function () {
     'js/vendor/particles.js'
   ])
     .pipe(concat('vendor.min.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 
   gulp.src([
