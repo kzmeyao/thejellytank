@@ -190,7 +190,7 @@
               <p>
                 This section is under construction &mdash; watch out for falling bricks.
                 <br />
-                Meanwhile, if you want to see photos, you can check out my <a href="https://500px.com/kzmeyao" target="_blank">500px</a> page.
+                Meanwhile, if you want to see my photography, you can check out my <a href="https://500px.com/kzmeyao" target="_blank">500px</a>.
               </p>
             </section>
           </article>
@@ -213,7 +213,7 @@
           <article className="segment greet-page">
             <section className="first-section">
               <h1>{headerOne}</h1>
-              <p>I'm Kevin Z. Yao, and The Jelly Tank is my creative space for displaying what I do outside of work. I'm a developer who hacks at the frontend, backend, and everything in between. However, I am also an all-around creative person. Whether it's through photography, design, coding projects, or writing, I am constantly looking for new ways to stretch my artistic side. I have been inspired by many things in life, this is my way of giving back. Hopefully, there is something here that will inspire you.</p>
+              <p>I'm Kevin Z. Yao, and The Jelly Tank is my creative space. My job description states that I'm something along the lines of an engineer, but that does not paint the full picture. I like to think that I'm also an all-around creative person. Whether it's through photography, design, coding experiments, or writing, I'm constantly looking for new ways to stretch my artistic side. I have been inspired by many things in life, this is my way of giving back. Hopefully, there is something here that will inspire you. If not, try the links below.</p>
               <h1>{headerTwo}</h1>
               <p>"What we see before us is just one tiny part of the world. We get in the habit of thinking, This is the world, but that's not true at all. The real world is a much darker and deeper place than this, and much of it is occupied by jellyfish and things."
               <br /><br />
