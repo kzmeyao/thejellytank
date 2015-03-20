@@ -90,7 +90,6 @@ a {
   pointer-events: none;
 }
 nav {
-  letter-spacing: .5px;
   width: 40%;
   background-image: url("/images/1.jpg");
   background-position-x: 100%;
@@ -197,6 +196,7 @@ nav .nav-overlay {
   padding: .5em;
 }
 .nav-gradient {
+  letter-spacing: .5px;
   position: relative;
 }
 .nav-gradient:after {
@@ -216,6 +216,7 @@ nav .nav-overlay {
 }
 .thin {
   font-family: "Raleway", "sans-serif";
+  font-weight: 200;
 }
 article {
   width: 60%;
@@ -256,6 +257,9 @@ section {
 }
 .first-section h1 {
   margin-top: 0;
+}
+.first-section .sub-intro {
+  font-weight: 100;
 }
 .segment + .segment {
   border-top: solid 1px #d4d4d4;
