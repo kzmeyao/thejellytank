@@ -96,7 +96,6 @@
   };
 
   var homeState = new HomeState();
-
   var bloom;
   var Home = React.createClass({
     mixins: [AnimationController],
@@ -138,6 +137,7 @@
         homeState.isJelly = true;
       }
       this.restoreState();
+      ga('send', 'pageview', '/');
     },
     start: function () {
       homeState.isOn = true;
@@ -175,6 +175,7 @@
     },
     componentDidMount: function () {
       this.assignNewState('write');
+      ga('send', 'pageview', '/write');
     }
   });
 
@@ -198,6 +199,7 @@
     },
     componentDidMount: function () {
       this.assignNewState('shoot');
+      ga('send', 'pageview', '/shoot');
     }
   });
 
@@ -248,6 +250,7 @@
     },
     componentDidMount: function () {
       this.assignNewState('greet');
+      ga('send', 'pageview', '/greet');
     }
   });
 
@@ -263,6 +266,9 @@
           </article>
         </div>
       )
+    },
+    componentDidMount: function () {
+      ga('send', 'pageview', '/write/' + this.getParams().postId);
     }
   });
 
