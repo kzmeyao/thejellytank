@@ -21,10 +21,7 @@ gulp.task('scripts', function () {
   gulp.src([
     'js/vendor/react.min.js',
     'js/vendor/react-router.min.js',
-    'js/vendor/reflux.min.js',
     'js/vendor/TweenMax.min.js',
-    'js/vendor/ScrollToPlugin.min.js',
-    'js/vendor/500px-js-sdk.js',
     'js/vendor/bloom.js',
     'js/vendor/particles.js'
   ])

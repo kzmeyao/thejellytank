@@ -182,7 +182,18 @@
     mixins: [AnimationController],
     render: function () {
       return (
-        <div></div>
+        <div>
+          <article className="segment greet-page">
+            <section className="first-section">
+              <h1>Oops.</h1>
+              <p>
+                This section is under construction &mdash; watch out for falling bricks.
+                <br />
+                Meanwhile, if you want to see photos, you can check out my <a href="https://500px.com/kzmeyao" target="_blank">500px</a> page.
+              </p>
+            </section>
+          </article>
+        </div>
       )
     },
     componentDidMount: function () {
