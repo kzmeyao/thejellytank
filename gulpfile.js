@@ -6,10 +6,10 @@ var uglify = require('gulp-uglify');
 var concatCSS = require('gulp-concat-css');
 var less = require('gulp-less');
 var sequence = require('gulp-sequence');
-var connect = require('gulp-connect');
 var react = require('gulp-react');
 var markdown = require('gulp-markdown-to-json');
 var inject = require('gulp-inject-string');
+var shell = require('gulp-shell')
 
 gulp.task('clean', function (cb) {
   del([
@@ -77,8 +77,8 @@ gulp.task('watch', function () {
   gulp.watch('less/**/*.less', ['styles']);
 });
 
-gulp.task('server', function() {
-  connect.server({port: 4000});
-});
+gulp.task('server', shell.task([
+  'divshot server -p 4000'
+]));
 
-gulp.task('default', sequence('clean', ['styles', 'scripts', 'markdown', 'server'], 'watch'));
+gulp.task('default', sequence('clean', ['styles', 'scripts', 'markdown'], ['server', 'watch']));
