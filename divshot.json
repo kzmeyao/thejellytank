@@ -1,0 +1,6 @@
+{
+  "name": "thejellytank",
+  "routes": {
+    "/**" : "index.html"
+  }
+}
