@@ -182,15 +182,23 @@
   var Shoot = React.createClass({
     mixins: [AnimationController],
     render: function () {
+      var bg1 = {backgroundImage : "url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DyHoQrxW205LoSB5W2wXZw.jpeg)"};
+      var bg2 = {backgroundImage : "url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*qlqRV-7FysTjcre-wapcSw.jpeg)"}
       return (
         <div>
           <article className="segment greet-page">
             <section className="first-section">
-              <h1>Oops.</h1>
+              <h1>Shooting the World</h1>
               <p>
-                This section is under construction &mdash; watch out for falling bricks.
-                <br />
-                Meanwhile, if you want to see my photography, you can check out my <a href="https://500px.com/kzmeyao" target="_blank">500px</a>.
+                I got into the world of photography in 2007 with a point-and-shoot. I don't really remember why I chose this expensive hobby, but I never looked back. Just one year later, I retired my point-and-shoot due to my desire for better image quality. Now I shoot with a Pentax K5IIs and a Sony RX1. My goal is to capture the world around me somewhat "faithfully". My specialties are landscapes and macros. Without further ado, these are my photos.
+                <br /><br />
+                <a className="photo-title" href="https://medium.com/@kzmeyao/costa-rica-pt-i-8a58d4f3f795" target="_blank" style={bg1}></a>
+                <small>Costa Rica Pt. I &mdash; December 2014</small>
+                <br /><br />
+                <a className="photo-title" href="https://medium.com/@kzmeyao/costa-rica-pt-ii-8dbd6542e9fc" target="_blank" style={bg2}></a>
+                <small>Costa Rica Pt. II &mdash; December 2014</small>
+                <br /><br />
+                Want to see more? Check out my <a href="https://500px.com/kzmeyao" target="_blank">500px</a> portfolio.
               </p>
             </section>
           </article>

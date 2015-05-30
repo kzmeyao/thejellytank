@@ -361,3 +361,15 @@ a.post {
 a.post:hover {
   border-bottom: 1px solid #66babd;
 }
+a.photo-title {
+  display: block;
+  width: 90%;
+  height: 250px;
+  border-radius: 4px;
+  background-size: cover;
+  padding: 1em;
+  transition: opacity .7s;
+}
+a.photo-title:hover {
+  opacity: .7;
+}
