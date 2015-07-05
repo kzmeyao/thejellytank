@@ -182,6 +182,7 @@
   var Shoot = React.createClass({
     mixins: [AnimationController],
     render: function () {
+      var bg0 = {backgroundImage : "url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*SGUwe9_7yIPNpXNIK_sYrA.jpeg)"};
       var bg1 = {backgroundImage : "url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DyHoQrxW205LoSB5W2wXZw.jpeg)"};
       var bg2 = {backgroundImage : "url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*qlqRV-7FysTjcre-wapcSw.jpeg)"}
       return (
@@ -191,6 +192,9 @@
               <h1>Shooting the World</h1>
               <p>
                 I got into the world of photography in 2007 with a point-and-shoot. I don't really remember why I chose this expensive hobby, but I never looked back. Just one year later, I retired my point-and-shoot due to my desire for better image quality. Now I shoot with a Pentax K5IIs and a Sony RX1. My goal is to capture the world around me somewhat "faithfully". My specialties are landscapes and macros. Without further ado, these are my photos.
+                <br /><br />
+                <a className="photo-title" href="https://medium.com/@kzmeyao/amer-fort-6feea9e76462" target="_blank" style={bg0}></a>
+                <small>Amer Fort &mdash; March 2015</small>
                 <br /><br />
                 <a className="photo-title" href="https://medium.com/@kzmeyao/costa-rica-pt-i-8a58d4f3f795" target="_blank" style={bg1}></a>
                 <small>Costa Rica Pt. I &mdash; December 2014</small>
