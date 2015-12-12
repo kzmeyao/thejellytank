@@ -82,6 +82,7 @@ a {
   display: none;
 }
 .particle {
+  color: #35a569 !important;
   overflow: hidden;
   font-size: 10px;
   font-family: "arial", sans-serif;
@@ -372,4 +373,32 @@ a.photo-title {
 }
 a.photo-title:hover {
   opacity: .7;
+}
+body {
+  color: #696969;
+  position: relative;
+  text-align: center;
+}
+body .wrapper {
+  height: 100%;
+}
+body .under-construction {
+  margin-top: -2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .under-construction .sub-title {
+  margin-top: -1em;
+  color: #999999;
+  font-style: italic;
+}
+body .under-construction ul {
+  margin-top: 1em;
+}
+body .under-construction li {
+  padding: 6px;
+  display: inline-block;
+  font-size: 24px;
 }

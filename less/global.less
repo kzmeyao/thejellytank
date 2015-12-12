@@ -48,6 +48,7 @@ a {
 }
 
 .particle {
+  color: @jellygreen !important;
   overflow: hidden;
   font-size: 10px;
   font-family: "arial", sans-serif;
@@ -336,5 +337,34 @@ a.photo-title {
   transition: opacity .7s;
   &:hover {
     opacity: .7;
+  }
+}
+
+body {
+  color: #696969;
+  position: relative;
+  text-align: center;
+  .wrapper {
+    height: 100%;
+  }
+  .under-construction {
+    margin-top: -2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .sub-title {
+      margin-top: -1em;
+      color: #999999;
+      font-style: italic;
+    }
+    ul {
+      margin-top: 1em;
+    }
+    li {
+      padding: 6px;
+      display: inline-block;
+      font-size: 24px;
+    }
   }
 }
