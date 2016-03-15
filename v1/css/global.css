@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon.eot?7yf1b0');
+  src: url('/fonts/icomoon.eot?#iefix7yf1b0') format('embedded-opentype'), url('/fonts/icomoon.woff?7yf1b0') format('woff'), url('/fonts/icomoon.ttf?7yf1b0') format('truetype'), url('/fonts/icomoon.svg?7yf1b0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-cancel:before {
+  content: "\e600";
+}
+.icon-camera:before {
+  content: "\e606";
+}
+.icon-plus:before {
+  content: "\e607";
+}
+.icon-envelope:before {
+  content: "\e608";
+}
+.icon-keyboard:before {
+  content: "\e609";
+}
+.icon-profile:before {
+  content: "\e60a";
+}
+.icon-px:before {
+  content: "\e601";
+}
+.icon-instagram:before {
+  content: "\e602";
+}
+.icon-twitter:before {
+  content: "\e603";
+}
+.icon-github:before {
+  content: "\e604";
+}
+.icon-linkedin:before {
+  content: "\e605";
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Lato", "sans-serif";
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #66babd;
+}
+.cf {
+  clear: both;
+}
+.jelly {
+  position: fixed;
+  overflow: hidden;
+  bottom: -16px;
+  z-index: 2;
+}
+#jelly-hidden {
+  display: none;
+}
+.particle {
+  color: #35a569 !important;
+  overflow: hidden;
+  font-size: 10px;
+  font-family: "arial", sans-serif;
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+}
+nav {
+  width: 40%;
+  background-image: url("/images/1.jpg");
+  background-position-x: 100%;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+}
+nav .nav-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, left top, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100% rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  color: #ffffff;
+}
+@media only screen and (max-width: 700px) {
+  nav {
+    width: 3.6em;
+  }
+}
+.notice {
+  display: inline-block;
+  color: #999999;
+  margin-bottom: 1.5em;
+}
+.notice .icon {
+  font-size: 1.5em;
+  margin-right: .3em;
+}
+.notice span {
+  vertical-align: middle;
+}
+.nav-desktop {
+  position: fixed;
+  width: 40%;
+}
+@media only screen and (max-width: 700px) {
+  .nav-desktop {
+    width: 3.6em;
+    display: none;
+  }
+}
+.nav-desktop .nav-wrapper {
+  margin: 3em;
+  text-align: right;
+}
+.nav-desktop .nav-logo {
+  text-align: center;
+  display: inline-block;
+}
+.nav-desktop a {
+  color: #ffffff;
+  transition: color .2s;
+}
+.nav-desktop a:hover,
+.nav-desktop a.active {
+  color: #569ea0;
+}
+.nav-desktop a:focus {
+  outline: 0;
+}
+.nav-mobile {
+  position: fixed;
+  opacity: 0;
+  width: 40%;
+}
+@media only screen and (max-width: 700px) {
+  .nav-mobile {
+    width: 3.6em;
+    opacity: 1;
+  }
+}
+.nav-mobile .nav-wrapper {
+  text-align: center;
+}
+.nav-mobile .nav-logo {
+  position: relative;
+  margin-top: 1em;
+  display: inline-block;
+}
+.nav-mobile #nav-active {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.nav-mobile a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color .2s;
+}
+.nav-mobile a:hover {
+  color: #569ea0;
+}
+.nav-mobile a:focus {
+  outline: 0;
+}
+.nav-mobile .icon {
+  font-size: 1.5em;
+  padding: .5em;
+}
+.nav-gradient {
+  letter-spacing: .5px;
+  position: relative;
+}
+.nav-gradient:after {
+  background-color: #569ea0;
+  background-image: -webkit-gradient(linear, left top, left top, color-stop(0%, #569ea0), color-stop(100% #35a569));
+  background-image: -webkit-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -moz-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -ms-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -o-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: linear-gradient(left, #569ea0 0%, #35a569 100%);
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  margin-top: 1.8em;
+}
+.thin {
+  font-family: "Raleway", "sans-serif";
+  font-weight: 200;
+}
+article {
+  width: 60%;
+  float: right;
+}
+@media only screen and (max-width: 700px) {
+  article {
+    width: 100%;
+  }
+}
+section {
+  padding: 3em;
+  max-width: 560px;
+}
+@media only screen and (max-width: 700px) {
+  section {
+    padding: 3em 2.5em 4em 6.5em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  section {
+    margin: 0 auto;
+    padding: 2em 1.5em 1em 5.1em;
+  }
+}
+.first-section {
+  margin-top: 4em;
+}
+@media only screen and (max-width: 700px) {
+  .first-section {
+    margin-top: 1.5em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .first-section {
+    margin-top: 2.5em;
+  }
+}
+.first-section h1 {
+  margin-top: 0;
+}
+.first-section .sub-intro {
+  font-weight: 100;
+}
+.segment + .segment {
+  border-top: solid 1px #d4d4d4;
+}
+.intro {
+  color: #5a5a5a;
+}
+.intro h1 {
+  line-height: 1.3em;
+  font-weight: 400;
+}
+.intro .thin {
+  margin-top: -0.9em;
+  font-size: 1.5em;
+}
+.intro button {
+  font-size: .9em;
+  width: 174px;
+  font-family: "Lato", "sans-serif";
+  color: #ffffff;
+  border-width: 0;
+  border-radius: 3px;
+  padding: 1em 1.7em;
+  font-weight: 100;
+  outline: none;
+  margin-top: 1.7em;
+  background-color: #569ea0;
+  background-image: -webkit-gradient(linear, left top, left top, color-stop(0%, #569ea0), color-stop(100% #35a569));
+  background-image: -webkit-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -moz-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -ms-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: -o-linear-gradient(left, #569ea0 0%, #35a569 100%);
+  background-image: linear-gradient(left, #569ea0 0%, #35a569 100%);
+  transition: opacity .7s;
+}
+.intro button:hover {
+  opacity: .7;
+}
+@media only screen and (max-width: 500px) {
+  .intro button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .intro .sub-intro {
+    display: none;
+  }
+}
+.greet-page h1 {
+  color: #5a5a5a;
+  font-family: "Raleway", "sans-serif";
+}
+.greet-page ul {
+  margin-bottom: 5em;
+}
+.greet-page li {
+  font-size: 1.5em;
+  margin-right: 1em;
+  display: inline-block;
+}
+.greet-page li a {
+  color: #66babd;
+  transition: color .3s;
+}
+.greet-page li a:hover {
+  color: #4ecb80;
+}
+p {
+  font-weight: 100;
+  color: #5a5a5a;
+}
+.post {
+  display: block;
+  font-weight: 100;
+}
+.post h1 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #5a5a5a;
+  margin-bottom: .5em;
+}
+.post h2 {
+  font-size: .8em;
+  font-weight: 100;
+  color: #4ecb80;
+}
+.post a {
+  color: #66babd;
+}
+.post a.follow {
+  color: #999999;
+}
+.post + .post {
+  margin-top: 2em;
+}
+a.post {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+a.post:hover {
+  border-bottom: 1px solid #66babd;
+}
+a.photo-title {
+  display: block;
+  width: 90%;
+  height: 250px;
+  border-radius: 4px;
+  background-size: cover;
+  padding: 1em;
+  transition: opacity .7s;
+}
+a.photo-title:hover {
+  opacity: .7;
+}
+body {
+  color: #696969;
+  position: relative;
+  text-align: center;
+}
+body .wrapper {
+  height: 100%;
+}
+body .under-construction {
+  margin-top: -2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .under-construction .sub-title {
+  margin-top: -1em;
+  color: #999999;
+  font-style: italic;
+}
+body .under-construction ul {
+  margin-top: 1em;
+}
+body .under-construction li {
+  padding: 6px;
+  display: inline-block;
+  font-size: 24px;
+}

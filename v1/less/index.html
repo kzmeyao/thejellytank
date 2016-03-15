@@ -10,15 +10,28 @@
     <meta name="description" content="The creative space of Kevin Z. Yao.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.png" />
-    <link rel="apple-touch-icon-precomposed" href="/apple-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:100,200' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/build/styles/bundle.css">
 </head>
 <body>
-    <div id="js-particles">
-        <div id="app"></div>
+    <div id="js-particles" class="wrapper">
+        <div class="under-construction">
+            <h1>THEJELLYTANK</h1>
+            <div class="sub-title">is currently under construction...</div>
+            <ul>
+                <li>
+                    <a href="https://medium.com/@kzmeyao" target="_blank">
+                        <img src="/images/medium.png" width="25"/>
+                    </a>
+                    <a href="https://twitter.com/kzmeyao" target="_blank">
+                        <img src="/images/twitter.png" width="35"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <script src="/build/js/bundle.js"></script>
     <script>
         (function (b, o, i, l, e, r) {
             b.GoogleAnalyticsObject = l;
@@ -34,6 +47,17 @@
         }(window, document, 'script', 'ga'));
         ga('create', 'UA-34517452-1');
         ga('send', 'pageview');
+    </script>
+    <script src="/build/js/vendor.min.js"></script>
+    <script>
+        var particles = new Particles("div");
+        for (var i = 0; i < 75; i++) {
+            var particle = document.createElement('div');
+            particle.setAttribute("id", "particle" + i);
+            particle.setAttribute("class", "particle");
+            particle.innerHTML = ".";
+            particles.spawn(document.getElementById("js-particles").appendChild(particle));
+        }
     </script>
 </body>
 </html>
